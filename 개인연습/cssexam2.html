@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>기본선택자, 그룹선택자</title>
+    <style>
+        h1, p{
+            color: red;
+        }
+        .text{
+            color: green;
+        }
+        #가가가{
+            color: orange;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="text">제목을 나타낸다</h1>
+    <h1>제목을 나타낸다</h1>
+    <p id="가가가">문단을 표시한다 가가가</p>
+    <p class="text">문단을 표시한다 나나나</p>
+    <p>문단을 표시한다 다다다</p>
+</body>
+</html>
+
+<!-- 겹치는 경우 id > class > 태그 순으로 간다. 
+     태그가 겹치는 경우 마지막으로 작성 된게 우선. -->
+     <!-- class 할때는 .이름
+          id 할때는  #이름 -->
