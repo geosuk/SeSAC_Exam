@@ -1,0 +1,7 @@
+.stripes{
+    background-color: yellow;
+}
+.stripes > :not(.yellow){
+    background-color: navy;
+    color: white;
+}
