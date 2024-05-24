@@ -1,0 +1,40 @@
+.container{
+    height: 500px;
+    width: 500px;
+    background-color: skyblue;
+    text-align: center;
+    position: relative;
+}
+div{
+    font-weight: bold;
+    line-height: 100px;
+    
+}
+
+.item1{
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    background-color: blue;
+    left: 50px;
+    top: 30px;
+    position: relative;
+}
+.item2{
+    height: 100px;
+    width: 100px;
+    right: 30px;
+    bottom: 100px;
+    border-radius: 50%;
+    background-color: green;
+    position: absolute;
+}
+.item3{
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    right: 100px;
+    top: 100px;
+    background-color: red;
+    position: fixed;
+}

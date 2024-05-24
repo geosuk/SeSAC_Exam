@@ -1,0 +1,71 @@
+
+/* 
+    Z-index
+    - 겹치는 요소에 대한 순서를 결정
+    - 숫자값: 양수, 0, 음수
+    - 숫자값이 클수록 더 위에 쌓임. (가장 앞에 놓인다)
+*/
+.container{
+    position: relative;
+    height: 500px;
+    width: 500px;
+}
+div{
+    border-radius: 50%;
+}
+.position-absolute {
+    position: absolute;
+}
+.div1{
+    top: 100px;
+    left: 100px;
+    background-color: blue;
+    z-index: 0;
+    width: 100px;
+    height: 100px;
+
+}
+
+
+
+.div2{
+    top: 140px;
+    left: 140px;
+    background-color: rgb(72, 72, 208);
+    z-index: 1;
+    width: 100px;
+    height: 100px;
+}
+
+.div3{
+    top: 180px;
+    left: 180px;
+    background-color: yellow;
+    z-index: 2;
+    width: 100px;
+    height: 100px;
+}
+
+.div4{
+    top: 220px;
+    left: 220px;
+    background-color: green;
+    z-index: 3;
+    width: 100px;
+    height: 100px;
+}
+
+.div5{
+    top: 260px;
+    left: 260px;
+    background-color: blue;
+    z-index: 5;
+    width: 100px;
+    height: 100px;
+}
+.img1{
+    
+    z-index: 4;
+    overflow: hidden;
+    bottom: 90;
+}

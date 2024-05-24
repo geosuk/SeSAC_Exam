@@ -1,0 +1,47 @@
+/* .container{
+    position: absolute;
+}
+img{
+    width: 250px;
+    height: 150px;
+    position: relative;
+    transform: skewX(30deg);
+    transition-duration: 1s;
+}
+.img1{
+    left: 100px;
+    top: 100px;
+}
+.img2{
+    left: 80px;
+    top: 80px;
+}
+.img3{
+    left: 60px;
+    top: 60px;
+}
+img:hover{
+    transform: skewX(0deg);
+} */
+div{
+    width: 100px;
+    height: 100px;
+    background-color: skyblue;
+    border: 1px solid black;
+    transition-duration: 1s;
+}
+.div1:hover{
+    width: 300px;
+}
+.div2:hover{
+    transform: skewX(-30deg);
+}
+.div3:hover{
+    background-color: red;
+    transform: translateX(200px);
+    border-radius: 50%;
+}
+.div4:hover{
+    background-color: yellow;
+    transform: rotateY(450deg) scale(1.5);
+}

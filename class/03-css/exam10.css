@@ -1,0 +1,14 @@
+.transition1{
+    background-color: black;
+    color: white;
+    height: 100px;
+    width: 100px;
+    overflow: scroll;
+    transition-duration: 1s;
+}
+.transition1:hover{
+    height: 300px;
+    width: 300px;
+   
+    
+}
