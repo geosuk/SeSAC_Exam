@@ -1,0 +1,38 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>viewport</title>
+    <style>
+        .vw{
+            width:50vw;
+            height: 50vw;
+            background-color: aqua;
+        }
+        .vh{
+            width: 50vh;
+            height: 100vh;
+            background-color: red;
+        }
+        .parent{
+            width: 300px;
+            height: 100px;
+            background-color: blue;
+        }
+        .child  {
+            width: 50%;
+            height: 100px;
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <h1>ViewPort 단위</h1>
+
+    <div class="vw">vw</div>
+    <div class="vh">vh</div>
+    <div class="parent">
+        <div class="child">%</div>
+    </div>
+</body>
+</html>
