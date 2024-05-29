@@ -33,3 +33,19 @@ console.log(c);
 console.log(x); // undefined
 var x = 10;
 console.log(x); // 10
+
+// #4.중복선언
+
+var x = 10;
+var x = 20;
+console.log(x);
+
+// 재선언
+var y = 10;
+y = 20;
+console.log(y);
+
+// 재할당
+var x = 10;
+x = 20;
+console.log(x);
