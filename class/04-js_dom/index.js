@@ -18,3 +18,37 @@ function changeValue(x){
     console.log('x > ', x);
 }
 changeValue(num);
+
+const obj = {one: 1, two: 2};
+const obj2 = obj;
+console.log(obj, obj2);
+console.log(obj === obj2); // true
+
+obj.five = 5;
+console.log(obj, obj2);
+console.log(obj === obj2); // true
+
+// obj와 obj2는 현재 데이터도 같고 참조값 (address, 주소)도 같기 때문이다.
+
+const obj3 = {one:1, two:2};
+const obj4 = {one:1, two:2};
+console.log(obj3, obj4);
+console.log(obj3===obj4); // false
+
+// obj3와 obj4는 현재 데이터가 같지만, 서로 다른 별도의 객체이다.
+// 즉, 참조값이 다르기 때문이다.
+
+obj3.five = 5;
+console.log(obj3, obj4);
+console.log(obj3 === obj4);
+
+
+
+
+
+
+
+
+
+
+
