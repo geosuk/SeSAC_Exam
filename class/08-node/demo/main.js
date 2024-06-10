@@ -28,4 +28,4 @@ http.createServer((req, res)=>{
     })
 }).listen(8000, ()=>{
     console.log('8000 서버실행');
-})
+})  
