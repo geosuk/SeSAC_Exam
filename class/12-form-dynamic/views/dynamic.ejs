@@ -1,0 +1,85 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- jQuery CDN (ajax 간편하게 사용하고자 불러옴) -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    <h1><%= title %> </h1>
+
+    <form name="register">
+        <label for="name">이름</label>
+        <input type="text" id="name" name="name">
+        <br>
+        
+        <span>성별</span>
+        <input type="radio" name="gender" value="남자" id="male">
+        <label for="male">남자</label>
+        <input type="radio" name="gender" id="female" value="여자">
+        <label for="female">여자</label>
+        <br>
+
+        <button type="button" onclick="ajaxGet();">ajax get 방식 요청</button>
+        <button type="button" onclick="ajaxPost();">ajax post 방식 요청</button>
+    </form>
+
+    <div class="result"></div>
+
+    <script>
+        const resultBox = document.querySelector('.result')
+
+        function ajaxPost(){
+            console.log('click Post');
+            const form = document.forms['register']
+            const data = {
+                name: form.name.value,
+                gender: form.gender.value
+            };
+            $.ajax({
+                type: 'POST',
+                url: '/ajax',
+                data,
+                success: function(data){
+                    console.log(data);
+                    resultBox.textContent = `POST /ajax 요청에 대한 응답 완료! ${data.name}님은 ${data.gender} 입니다`
+                    resultBox.style.color = 'red';
+                }
+            })
+        }
+
+        function ajaxGet(){
+            console.log('click');
+
+            // 폼 선택하기
+            const form = document.forms['register'];
+            // 폼 요소의 값을 추출
+            console.dir(form);
+            console.dir(form.name);
+            console.dir(form.gender);
+            console.dir(form.name.value);
+            console.dir(form.gender.value);
+
+            //서버로 보낼 데이터 양식 생성하기
+            const data = {
+                name: form.name.value,
+                gender: form.gender.value
+            };
+            // ajax 비동기 통신(GET 방식)
+            $.ajax({
+                type: 'GET',
+                url: '/ajax',
+                data, // data: data
+                success: function(data){
+                    console.log(data);
+                    resultBox.textContent = `GET /ajax 요청에 대한 응답 완료 ${data.name}님은 ${data.gender} 입니다.`;
+                    resultBox.style.color = 'blue';
+                }
+            })
+            // (서버의 index.js 파일로 유저가 브라우저의 입력한 값을 보내야 한다.)
+        }
+    </script>
+</body>
+</html>
