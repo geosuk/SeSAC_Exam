@@ -20,7 +20,7 @@
         <br>
 
         <span>성별</span>
-        <input type="radio" name="gender" value="남자" id="male">
+        <input type="radio" name="gender" value="남자" id="male" required>
         <label for="male">남자</label>
         <input type="radio" name="gender" value="여자" id="female">
         <label for="female">여자</label>
@@ -34,10 +34,15 @@
         <button type="button" onclick="fetchPost();">fetch post 방식 요청</button>
     </form>
 
+    <button onclick="getTodos();">외부 API를 이용해 TODO 불러오기</button>
     <div class="result"></div>
 
     <script>
         const resultBox = document.querySelector('.result');
+
+        function getTodos(){
+            
+        }
 
         function fetchGet() {
             console.log('click fetchGet btn!');
@@ -136,7 +141,7 @@
             axios({
                 method: 'GET',
                 // i) params 키를 이용하지 않는다면 요청 url에 query string을 작성
-                url: `/axios?name${form.name.value}&gender=${form.gender.value}`,
+                url: `/axios?name=${form.name.value}&gender=${form.gender.value}`,
                 // ii) params 키를 이용하는 경우 
                 // url: '/axios',
                 // params: data,
@@ -149,9 +154,15 @@
                 // console.log(res.config)
 
                 const { name, gender } = res.data; // {name: '션', gender: '남자'}
-                resultBox.textContent 
-                    = `GET /axios 요청에 대한 응답 완료! ${name}님은 ${gender}이시죠?ㅎㅎ`;
-                resultBox.style.color = 'green';
+                if (!name || name.trim() === '') {
+                 resultBox.textContent = '이름을 입력해주세요';
+                } else if (!gender || gender.trim() === '') {
+                resultBox.textContent = '성별을 체크 해주세요';
+                } else {
+                 resultBox.textContent = 
+                 `GET /axios 요청에 대한 응답 완료! ${name}님은 ${gender}이시죠?ㅎㅎ`;
+                 resultBox.style.color = 'green';
+                }
             }).catch(function (err) {
                 console.error('Error', err);
                 resultBox.textContent = '앗! 알 수 없는 에러 발생.. 다시 시도해주세요..';
