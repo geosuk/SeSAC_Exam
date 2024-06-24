@@ -7,6 +7,9 @@ app.set('views', './views');
 
 const indexRouter = require('./routes/index'); // index는 생략 가능
 app.use('/', indexRouter);
+
+const userRouter = require('./routes/user');
+app.use('/user', userRouter);
 // 맨 마지막 라우트(주소)로 선언 그렇지 않으면 나머지 라우팅이 전부 무시됨.
 app.get('*',(req, res)=>{
     res.render('404');
