@@ -4,6 +4,7 @@ const PORT = 8000;
 const router = require('./routes/index');
 const playerRouter = require('./routes/player')
 const {sequelize} = require('./models'); // 해당 폴더의 index파일
+const teamRouter = require('./routes/team');
 app.set('view engine', 'ejs');
 app.set('views', 'views');
 app.use(express.urlencoded({extended: true}));
@@ -11,6 +12,7 @@ app.use(express.json());
 // Meterial Icon 설치
 app.use('/', router);
 app.use('/players', playerRouter);
+app.use('/teams', teamRouter);
 
 sequelize
     // force: true; 서버 실행 할때마다 테이블을 재 생성
