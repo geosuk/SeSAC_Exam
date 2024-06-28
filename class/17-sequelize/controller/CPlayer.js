@@ -1,4 +1,4 @@
-// 선수와 관련된 컨트롤러 몽므
+// 선수와 관련된 컨트롤러 모음
 const {Player, Profile} = require('../models/index');
 
 exports.getPlayers = async (req, res)=>{

@@ -1,0 +1,9 @@
+@server = http://localhost:8000
+@id = 1
+
+### 전체 선수 조회
+GET {{server}}/
+
+### id로 특정 선수 조회
+GET {{server}}/visitor/{{id}}
+
