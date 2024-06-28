@@ -29,7 +29,7 @@ const playerModel = (sequelize, DataTypes)=>{
     {
         freezeTableName: true,
         //테이블 명을 고정 하겠다.
-        timestamps: false,
+        // timestamps: false,
         // 데이터가 추가되고 수정된 시간을 자동으로 컬럼을 만들어서 기록
     });
     return Player;
