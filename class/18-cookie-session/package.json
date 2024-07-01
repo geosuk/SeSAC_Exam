@@ -4,7 +4,8 @@
   "main": "cookie.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start:cookie": "nodemon cookie.js"
+    "start:cookie": "nodemon cookie.js",
+    "start:session": "nodemon session.js"
   },
   "keywords": [],
   "author": "",
@@ -12,6 +13,7 @@
   "description": "",
   "dependencies": {
     "cross-env": "^7.0.3",
-    "dotenv": "^16.4.5"
+    "dotenv": "^16.4.5",
+    "express-session": "^1.18.0"
   }
 }
