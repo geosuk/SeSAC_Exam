@@ -46,4 +46,10 @@ select * from player;
 select * from profile;
 select * from team;
 select * from game;
-select * from teamgame;
+select * from teamguseruser_examame;
+select * from team;
+
+desc user_exam;
+insert into user_exam(User_id, User_pw, createdAt, updatedAt) values
+('바나나', '1234', now(), now());
+select * from user_exam;
