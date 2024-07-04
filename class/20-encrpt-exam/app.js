@@ -8,6 +8,7 @@ dotenv.config({
     path: path.resolve(__dirname, '.env')
 })
 
+
 const port = process.env.PORT;
 app.set('view engine', 'ejs');
 app.set('views', './views');
@@ -23,6 +24,14 @@ app.get('/', (req, res)=>{
 // })
 
 app.use('/', userRoutes);
+
+app.get('/profile', (req, res) => {
+    if (req.session.user) {
+        res.render('profile', { user: req.session.user });
+    } else {
+        res.redirect('/login');
+    }
+});
 
 sequelize.sync({force : false}).then(()=>{
     app.listen(port, ()=>{
