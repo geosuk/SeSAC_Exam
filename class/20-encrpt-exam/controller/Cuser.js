@@ -31,7 +31,7 @@ exports.login = async (req, res) => {
             const isMatch = await bcrypt.compare(pw, user.pw);
             if (isMatch) {
                 console.log('Password match'); // 비밀번호 일치 로그
-                res.redirect('/profile');
+                res.send({result:true, user});
             } else {
                 console.log('Password mismatch'); // 비밀번호 불일치 로그
                 res.status(401).send('로그인 실패!');

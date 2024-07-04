@@ -9,23 +9,16 @@
     <h1>님 프로필 정보</h1>
 
     <form name="edit-profile">
-      <input
-        type="text"
-        id="userid"
-        value="123"
-        readonly
-      /><br />
-      <input type="text" id="name" value="123" /><br />
-      <input type="password" id="pw" value="$2b$11$VLpjSLunsu3bHCuGq.rquOtueKXIZn/xi/9J3fhrlav6YxKHAikky" /><br />
-      <input type="hidden" id="id" value="11" /><br />
-      <button type="button" onclick="edit()">수정</button>
-      <button type="button" onclick="destroy()">회원탈퇴</button>
+      
+      
+      <a href="/">홈</a>
+      <a href="/login">로그인</a>
+      <!-- <button type="button" onclick="edit()">수정</button>
+      <button type="button" onclick="destroy()">회원탈퇴</button> -->
     </form>
 
-    <br />
-    <a href="/">홈</a>
 
-    <script>
+    <!-- <script>
       function edit() {
         const form = document.forms['edit-profile'];
         axios({
@@ -60,6 +53,6 @@
           }
         });
       }
-    </script>
+    </script> -->
   </body>
 </html>

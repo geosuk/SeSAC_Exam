@@ -4,6 +4,7 @@ const path = require('path');
 const {sequelize} = require('./models');
 const dotenv = require('dotenv');
 const userRoutes = require('./routes/user');
+const session = require('express-session');
 dotenv.config({
     path: path.resolve(__dirname, '.env')
 })
@@ -25,7 +26,10 @@ app.get('/', (req, res)=>{
 
 app.use('/', userRoutes);
 
+// 로그인 후 해당 파일로 넘어가면
+
 app.get('/profile', (req, res) => {
+    console.log(req.session);  // 세션 정보 출력
     if (req.session.user) {
         res.render('profile', { user: req.session.user });
     } else {
