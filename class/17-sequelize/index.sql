@@ -53,3 +53,7 @@ desc user_exam;
 insert into user_exam(User_id, User_pw, createdAt, updatedAt) values
 ('바나나', '1234', now(), now());
 select * from user_exam;
+
+desc member_exams;
+
+select*from member_exams;
