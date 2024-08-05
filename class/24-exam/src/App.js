@@ -1,5 +1,5 @@
 import React from 'react';
-
+import "./App.css"
 function App() {
   const name = '해피'; // 반려동물의 이름을 입력하세요.
   const animal = 'cat'; // 반려동물의 종을 입력하세요.
@@ -9,13 +9,16 @@ function App() {
   const title = "Hello World!"
   return (
     
-    <div>
+    <div className='exam_div'>
+      <form action="">
+        <h3>{title}</h3>
+        <label htmlFor='id'>아이디 : </label>
+        <input  type='text' id="id" />
+        <br/>
+        <label htmlFor='pw'>비밀번호 : </label>
+        <input id="pw" type='password' />
+      </form>
       
-      <header>{title}</header>
-      <span>아이디 : </span>
-      <input type='text'></input> <br/>
-      <span>비밀번호 : </span>
-      <input type='password'></input>
       <h1>실습 4</h1>
       <h1>실습1</h1>
       <h2>{`My pet's name is ${name} and it is a ${animal}.`}</h2>
@@ -24,7 +27,6 @@ function App() {
       {3 + 5 == 8 ? <p>정답입니다!</p> : <p>틀렸습니다!</p>}
       <h1>실습 3</h1>
       {a > b && <p>a가 b보다 큽니다</p>}
-      
       
     </div>
   );
